@@ -33,20 +33,35 @@
   --spacing-1000: 15em;
 
   /* Desktop */
-  --fs-xsmall: 0.75rem; /* Smallest Text */
-  --fs-small: 0.875rem; /* Detail Text */
-  --fs-regular: 1rem; /* Body Text */
-  --fs-subtitle: 1.125rem; /* Subtitle */
-  --fs-title-small: 1.5rem; /* Title Text */
-  --fs-title-regular: 1.75rem; /* Title Text Alternative */
-  --fs-main-title-small: 2rem; /* Main Text */
-  --fs-main-title-regular: 2.375rem; /* Main Text */
-  --fs-main-title-large: 2.625rem; /* Main Text */
-  --fs-display-small: 3.75rem; /* Display Text */
-  --fs-display-regular: 4.5rem; /* Display Text */
-  --fs-display-large: 5rem; /* Display Text */
+  --fs-desktop-smallest: 0.75rem; /* 12px */
+  --fs-desktop-detail: 0.875rem; /* 14px */
+  --fs-desktop-regular: 1.125rem; /* 16px/18px */
+  --fs-desktop-subtitle: 1.25rem; /* 20px */
+  --fs-desktop-subtitle: 1.375rem; /* 22px */
+  --fs-desktop-title-small: 1.5rem; /* 24px */
+  --fs-desktop-title-regular: 1.75rem; /* 28px */
+  --fs-desktop-main-small: 2rem; /* 32px */
+  --fs-desktop-main-regular: 2.375rem; /* 38px */
+  --fs-desktop-main-large: 2.625rem; /* 42px */
+  --fs-desktop-display-small: 3.75rem; /* 60px */
+  --fs-desktop-display-regular: 4.5rem; /* 72px */
+  --fs-desktop-display-large: 5rem; /* 80px */
 
-  --fs-body: var(--fs-regular);
+  /* Mobile */
+  --fs-mobile-xsmall: 0.75rem; /* 12px */
+  --fs-mobile-small: 0.875rem; /* 14px */
+  --fs-mobile-regular: 1rem; /* 16px */
+  --fs-mobile-subtitle: 1.125rem; /* 18px */
+  --fs-mobile-title-small: 1.25rem; /* 20px */
+  --fs-mobile-title-regular: 1.375rem; /* 22px */
+  --fs-mobile-main-title-small: 1.75rem; /* 28px */
+  --fs-mobile-main-title-regular: 2rem; /* 32px */
+  --fs-mobile-main-title-large: 2.375rem; /* 38px */
+  --fs-mobile-display-small: 3rem; /* 48px */
+  --fs-mobile-display-regular: 3.75rem; /* 80px */
+  --fs-mobile-display-large: 4.5rem; /* 72px */
+
+  --fs-body: clamp(var(--fs-mobile-regular), 0.9565rem + 0.2174vw, var(--fs-desktop-regular));
   --fs-title: var(--fs-title-regular);
   --fs-sub-title: var(--fs-subtitle);
   --fs-smallest: ;
