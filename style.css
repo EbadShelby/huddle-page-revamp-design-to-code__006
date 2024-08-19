@@ -212,6 +212,7 @@ h2 {
 }
 .hero__stat-description {
   opacity: 0.6;
+  text-align: center;
 }
 .feature__image-container {
   display: flex;
@@ -243,6 +244,9 @@ h2 {
   text-align: center;
 }
 /* =============|| Buttons ||============= */
+button {
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, .1);
+}
 .header__cta-button {
   font-size: 0.625rem;
   padding: 0.25em 1.25em;
@@ -291,6 +295,9 @@ h2 {
   font-family: var(--ff-accent);
   text-transform: uppercase;
   font-size: var(--fs-desktop-regular);
+}
+.newsletter__description {
+  font-size: var(--fs-mobile-small);
 }
 .newsletter__input {
   padding-block: .5em;
@@ -356,8 +363,36 @@ h2 {
 /* ===========|| Breakpoints ||=========== */
 /* ======================================= */
 @media (min-width: 600px) {
+  /* ============|| Header  ||============== */
+  .header__logo {
+    width: 8em;
+  }
+
+  /* ============|| Main  ||============== */
   .hero__stats {
     grid-template-columns: 1fr 1fr;
+  }
+  .hero__stat-total {
+    font-size: var(--fs-desktop-display-regular);
+  }
+  
+  /* =============|| Buttons ||============ */
+  .header__cta-button {
+    font-size: var(--fs-desktop-detail);
+    padding: 0.25em 1.25em;
+    border-radius: 100vmax;
+  }
+  .hero__cta-button,
+  .cta__button {
+  font-size: var(--fs-mobile-regular);
+  }
+  .newsletter__button {
+    padding: 1em 2.5em;
+  }
+  /* =============|| Footer ||============ */
+  .newsletter__form {
+    grid-template-columns: 1fr auto;
+    gap: var(--spacing-400);
   }
 }
 @media (min-width: 900px) {
