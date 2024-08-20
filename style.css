@@ -228,6 +228,10 @@ h2 {
   text-align: center;
   padding-top: var(--spacing-800);
 }
+.main__feature[data-order="1"]::before {
+  content: "";
+  position: absolute;
+}
 .feature__content {
   display: grid;
   place-content: center;
@@ -249,14 +253,14 @@ h2 {
 }
 /* =============|| Buttons ||============= */
 button {
-  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, .1);
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 button:hover {
-  opacity: .9;
+  opacity: 0.9;
 }
 button:active {
-  opacity: .8;
+  opacity: 0.8;
 }
 .header__cta-button {
   font-size: 0.625rem;
@@ -312,8 +316,8 @@ button:active {
   font-size: var(--fs-mobile-small);
 }
 .newsletter__input {
-  padding: .75em;
-  border-radius: .3em;
+  padding: 0.75em;
+  border-radius: 0.3em;
   border: none;
 }
 .newsletter__button {
@@ -412,7 +416,7 @@ button:active {
   }
   .hero__cta-button,
   .cta__button {
-  font-size: var(--fs-mobile-regular);
+    font-size: var(--fs-mobile-regular);
   }
   /* =============|| Footer ||============ */
   .newsletter__form {
