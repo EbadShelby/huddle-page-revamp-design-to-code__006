@@ -226,6 +226,111 @@ h2 {
   flex-direction: column;
   gap: var(--spacing-600);
   text-align: center;
+  position: relative;
+  margin-block: var(--spacing-800);
+  padding-block: var(--spacing-700);
+}
+.main__feature:not(:nth-child(2)) {
+  background-color: #F6FBFF;
+
+}
+.main__feature[data-order="1"]::before {
+  content: "";
+  background: url(images/bg-section-top-mobile-1.svg) bottom center no-repeat;
+  position: absolute;
+  background-size: contain;
+  left: 0;
+  right: 0;
+  top: -5em;
+  background-color: royalblue;
+  width: 100%;
+  height: 5em;
+}
+.main__feature[data-order="1"]::after {
+  content: "";
+  background: url(images/bg-section-bottom-mobile-1.svg) top center no-repeat;
+  position: absolute;
+  background-size: contain;
+  left: 0;
+  right: 0;
+  bottom: -5em;
+  background-color: royalblue;
+  width: 100%;
+  height: 5em;
+}
+.main__feature[data-order="3"]::before {
+  content: "";
+  background: url(images/bg-section-top-mobile-2.svg) bottom center no-repeat;
+  position: absolute;
+  background-size: contain;
+  left: 0;
+  right: 0;
+  top: -5em;
+  background-color: royalblue;
+  width: 100%;
+  height: 5em;
+}
+.main__feature[data-order="3"]::after {
+  content: "";
+  background: url(images/bg-section-bottom-mobile-2.svg) top center no-repeat;
+  position: absolute;
+  background-size: contain;
+  left: 0;
+  right: 0;
+  bottom: -5em;
+  background-color: royalblue;
+  width: 100%;
+  height: 5em;
+}
+@media (min-width: 280px) {
+  .main__feature[data-order="1"]::before {
+    content: "";
+    background: url(images/bg-section-top-desktop-1.svg) bottom center no-repeat;
+    position: absolute;
+    background-size: contain;
+    left: 0;
+    right: 0;
+    top: -5em;
+    background-color: royalblue;
+    width: 100%;
+    height: 5em;
+  }
+  .main__feature[data-order="1"]::after {
+    content: "";
+    background: url(images/bg-section-bottom-desktop-1.svg) top center no-repeat;
+    position: absolute;
+    background-size: contain;
+    left: 0;
+    right: 0;
+    bottom: -5em;
+    background-color: royalblue;
+    width: 100%;
+    height: 5em;
+  }
+  .main__feature[data-order="3"]::before {
+    content: "";
+    background: url(images/bg-section-top-desktop-2.svg) bottom center no-repeat;
+    position: absolute;
+    background-size: contain;
+    left: 0;
+    right: 0;
+    top: -5em;
+    background-color: royalblue;
+    width: 100%;
+    height: 5em;
+  }
+  .main__feature[data-order="3"]::after {
+    content: "";
+    background: url(images/bg-section-bottom-desktop-2.svg) top center no-repeat;
+    position: absolute;
+    background-size: contain;
+    left: 0;
+    right: 0;
+    bottom: -5em;
+    background-color: royalblue;
+    width: 100%;
+    height: 5em;
+  }
 }
 .feature__content {
   display: grid;
