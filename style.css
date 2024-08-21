@@ -179,6 +179,7 @@ h2 {
 .main__hero {
   max-width: 95%;
   margin-inline: auto;
+  margin-bottom: 15em;
 }
 .main__hero > *:not(:last-child) {
   margin-bottom: var(--spacing-800);
@@ -230,106 +231,84 @@ h2 {
   margin-block: var(--spacing-800);
   padding-block: var(--spacing-700);
 }
-.main__feature:not(:nth-child(2)) {
-  background-color: #F6FBFF;
-
+.main__feature > * {
+  max-width: 86%;
+  margin-inline: auto;
 }
-.main__feature[data-order="1"]::before {
-  content: "";
-  background: url(images/bg-section-top-mobile-1.svg) bottom center no-repeat;
-  position: absolute;
-  background-size: contain;
+.main__feature:not(:nth-child(2)) {
+  background-color: #f6fbff;
+}
+
+.main__feature[data-order="1"]::after,
+.main__feature[data-order="1"]::before,
+.main__feature[data-order="3"]::after,
+.main__feature[data-order="3"]::before {
   left: 0;
   right: 0;
-  top: -5em;
-  background-color: royalblue;
+  position: absolute;
+  background-position: contain;
   width: 100%;
   height: 5em;
+  content: "";
+}
+.main__feature[data-order="1"]::before,
+.main__feature[data-order="3"]::before {
+  top: -5em;
+}
+.main__feature[data-order="1"]::after,
+.main__feature[data-order="3"]::after {
+  bottom: -5em;
+}
+
+.main__feature[data-order="1"]::before {
+  background: url(images/bg-section-top-mobile-1.svg) bottom center no-repeat;
 }
 .main__feature[data-order="1"]::after {
-  content: "";
   background: url(images/bg-section-bottom-mobile-1.svg) top center no-repeat;
-  position: absolute;
-  background-size: contain;
-  left: 0;
-  right: 0;
-  bottom: -5em;
-  background-color: royalblue;
-  width: 100%;
-  height: 5em;
 }
 .main__feature[data-order="3"]::before {
-  content: "";
   background: url(images/bg-section-top-mobile-2.svg) bottom center no-repeat;
-  position: absolute;
-  background-size: contain;
-  left: 0;
-  right: 0;
-  top: -5em;
-  background-color: royalblue;
-  width: 100%;
-  height: 5em;
 }
 .main__feature[data-order="3"]::after {
-  content: "";
   background: url(images/bg-section-bottom-mobile-2.svg) top center no-repeat;
-  position: absolute;
-  background-size: contain;
-  left: 0;
-  right: 0;
-  bottom: -5em;
-  background-color: royalblue;
-  width: 100%;
-  height: 5em;
 }
 @media (min-width: 280px) {
   .main__feature[data-order="1"]::before {
-    content: "";
     background: url(images/bg-section-top-desktop-1.svg) bottom center no-repeat;
-    position: absolute;
     background-size: contain;
-    left: 0;
-    right: 0;
-    top: -5em;
-    background-color: royalblue;
     width: 100%;
-    height: 5em;
   }
   .main__feature[data-order="1"]::after {
     content: "";
     background: url(images/bg-section-bottom-desktop-1.svg) top center no-repeat;
-    position: absolute;
     background-size: contain;
-    left: 0;
-    right: 0;
-    bottom: -5em;
-    background-color: royalblue;
     width: 100%;
-    height: 5em;
   }
   .main__feature[data-order="3"]::before {
-    content: "";
     background: url(images/bg-section-top-desktop-2.svg) bottom center no-repeat;
-    position: absolute;
     background-size: contain;
-    left: 0;
-    right: 0;
-    top: -5em;
-    background-color: royalblue;
     width: 100%;
-    height: 5em;
   }
   .main__feature[data-order="3"]::after {
-    content: "";
     background: url(images/bg-section-bottom-desktop-2.svg) top center no-repeat;
-    position: absolute;
     background-size: contain;
-    left: 0;
-    right: 0;
-    bottom: -5em;
-    background-color: royalblue;
     width: 100%;
-    height: 5em;
+  }
+}
+@media (min-width: 750px) {
+  .main__feature[data-order="1"]::after,
+  .main__feature[data-order="1"]::before,
+  .main__feature[data-order="3"]::after,
+  .main__feature[data-order="3"]::before {
+    height: 15em;
+  }
+  .main__feature[data-order="1"]::before,
+  .main__feature[data-order="3"]::before {
+    top: -15em;
+  }
+  .main__feature[data-order="1"]::after,
+  .main__feature[data-order="3"]::after {
+    bottom: -15em;
   }
 }
 .feature__content {
@@ -338,6 +317,9 @@ h2 {
 }
 .feature__content h2 {
   margin-bottom: var(--spacing-200);
+}
+.main__cta {
+  margin-block: 5em 10em;
 }
 .cta__group {
   display: flex;
@@ -390,11 +372,23 @@ button:active {
   content: "";
   background: url(images/bg-footer-top-mobile.svg) bottom center no-repeat;
   height: 5em;
-  background-size: contain;
+  background-size: 100%;
   position: absolute;
   top: -5em;
   left: 0;
   right: 0;
+}
+@media (min-width: 620px) {
+  .footer::before {
+    height: 10em;
+    top: -10em;
+  }
+}
+@media (min-width: 750px) {
+  .footer::before {
+    height: 15em;
+    top: -15em;
+  }
 }
 .footer__wrapper {
   padding-block: var(--spacing-400);
